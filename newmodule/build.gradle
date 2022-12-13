@@ -6,12 +6,12 @@ plugins {
 apollo {
     service("service") {
         packageName.set("com.example")
-        generateApolloMetadata.set(true)
     }
 }
 
 dependencies {
+    implementation(project(":schema"))
     implementation("com.apollographql.apollo3:apollo-runtime")
-    apolloUsedCoordinates project(":feature"), project(":newmodule")
+    apolloSchema(project(":schema"))
+    apolloMetadata(project(":schema"))
 }
-

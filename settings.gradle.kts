@@ -1,4 +1,4 @@
-include(":schema", ":feature")
+include(":schema", ":feature", ":newmodule")
 
 pluginManagement {
     listOf(repositories, dependencyResolutionManagement.repositories).forEach {
