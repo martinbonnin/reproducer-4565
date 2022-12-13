@@ -1,0 +1,5 @@
+query getB {
+    b {
+        field
+    }
+}

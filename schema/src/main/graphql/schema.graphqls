@@ -1,0 +1,12 @@
+type Query {
+    a: A!
+    b: B!
+}
+
+type A {
+    field: String
+}
+
+type B {
+    field: String
+}

@@ -1,0 +1,17 @@
+plugins {
+    id("org.jetbrains.kotlin.jvm")
+    id("com.apollographql.apollo3")
+}
+
+apollo {
+    service("service") {
+        packageName.set("com.example")
+    }
+}
+
+dependencies {
+    implementation(project(":schema"))
+    implementation("com.apollographql.apollo3:apollo-runtime")
+    apolloSchema(project(":schema"))
+    apolloMetadata(project(":schema"))
+}
